@@ -21,12 +21,9 @@ def preorder(root):
     # code here
     res=[]
     def sol(x):
-        res.append(x.data)
-        if x.left==None and x.right==None:
-            return res
-        if x.left!=None:
+        if x!=None:
+            res.append(x.data)
             sol(x.left)    
-        if x.right!=None:
             sol(x.right)
         return res
     return sol(root)
